@@ -20,8 +20,8 @@
     <h1>See what's happening in the world right now</h1>
 	<h3>Join Twitter today</h3>
 	<br>
-	<a class="button1" href="#">Sign Up</a>
-	<a class="button2" href="#">Log in</a>
+	<a class="button1" href="file:///C:/Users/admin/Videos/great%20learning/kumaresan_Assignment_signup/html.html#">Sign Up</a>
+	<a class="button2" href="file:///C:/Users/admin/Videos/great%20learning/kumaresan_Assignment%201%20-%20Build%20Signup%20and%20Login%20Pages%20of%20Twitter/html.html">Log in</a>
 </section>
 	
 <footer>
@@ -45,8 +45,52 @@
 		<a href="#">Settings</a> |
 		<a href="#">&copy;Twitter</a> 
 	</ul>
-	
 </footer>
+<div id="signup" class="modal" style="display:block;">
+	<div class="modal-content">
+	<h3 class="modal-heading">Sign up to Twitter</h3>
+	  <span class="close" onclick="closeDialog()">X</span>
+	    <div class="modal-body">
+	        <div><img src="Icons-15.png" alt="Icons-15.png"></div>
+	        <form method="post" action="home.html">
+	        	<fieldset>
+	        	    <legend>Create your account</legend>
+	        		    <input type="text" name="username"  required minlength="4" maxlength="9" placeholder="Enter username">
+	        		    <input type="email" name="email" placeholder="Enter email" required="email">
+	        		    <input type="Password" name="Password" required="minimum 8 characters, alphanumeric, Uppercase, etc." placeholder="Enter Password">
+	        		    <input type="Password" name="Password" placeholder="Confirm Password" required="Password">
+	        		    <button type="submit" class="btn">Sign up</button>
+	        	</fieldset>
+	        </form>
+        </div>
+	</div>
+</div>
+<div id="login" class="modal" style="display: block;">
+	<div class="modal-content1">
+		<h3 class="modal-heading">Log in to Twitter</h3>
+		<span class="close" onclick="closeDialog()">X</span>
+		<div class="modal-body">
+			<form action="home.html" method="post">
+				<input type="text" name="Email" placeholder="Email Address" required="email">
+				<input type="text" name="Password" placeholder="Password" required="Password"><br>
+				<button type="submit" class="btn">Log in</button>
+			</form>
+		</div>
+		
+	</div>
+</div>
+<script>
+		function displaySignUp(){
+			document.getElementById("signup").style.display="block";
+		}
+		function displayLogin(){
+			document.getElementById("login").style.display="block";
+		}
+		function closeDialog(){
+			document.getElementById("signup").style.display="none";	
+			document.getElementById("login").style.display="block";	
+		}
+	</script>
 
 
 </body>
