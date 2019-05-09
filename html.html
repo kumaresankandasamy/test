@@ -52,7 +52,7 @@
 	  <span class="close" onclick="closeDialog()">X</span>
 	    <div class="modal-body">
 	        <div><img src="Icons-15.png" alt="Icons-15.png"></div>
-	        <form method="post" action="home.html">
+	        <form method="post"  onsubmit="registeruser(event)">
 	        	<fieldset>
 	        	    <legend>Create your account</legend>
 	        		    <input type="text" name="username"  required minlength="4" maxlength="9" placeholder="Enter username">
@@ -70,7 +70,7 @@
 		<h3 class="modal-heading">Log in to Twitter</h3>
 		<span class="close" onclick="closeDialog()">X</span>
 		<div class="modal-body">
-			<form action="home.html" method="post">
+			<form  method="post" onsubmit="registeruser(event)">
 				<input type="text" name="Email" placeholder="Email Address" required="email">
 				<input type="text" name="Password" placeholder="Password" required="Password"><br>
 				<button type="submit" class="btn">Log in</button>
@@ -90,6 +90,47 @@
 			document.getElementById("signup").style.display="none";	
 			document.getElementById("login").style.display="block";	
 		}
+
+
+		var user={
+			
+			username:"kumaresankandasamy"
+			
+		}
+		var init={
+			method:'POST',
+			data:JSON.stringify(user),
+			headers:{
+				'Content-Type':'application/json'
+			}
+		}
+		var promise=fetch("https://jsonplaceholder.typicode.com/kumaresankandasamy/test/users",init);
+		promise
+		    .then(response=>response.json())
+		    .then(data=>console.log(data));
+
+		    function registerUser(event){
+		    	console.log(event);
+		    	event.preventDefault();
+		    	document.forms[0];
+		    	var userForm=document.forms[0];
+		    	var user={};
+		    	user.username=userForm.username;
+		    }
+		   	/*delete*/	
+        var promise=fetch('https://jsonplaceholder.typicode.com/kumaresankandasamy/test/users', { 
+        method: 'DELETE' 
+        }); 
+/*update*/
+        fetch('https://jsonplaceholder.typicode.com/kumaresankandasamy/test/users', {
+        headers: { "Content-Type": "application/json; charset=utf-8" },
+        method: 'PUT',
+        body: JSON.stringify({
+        username: 'kumaresankandasamy',
+        
+  })
+}) 
+
 	</script>
 
 
