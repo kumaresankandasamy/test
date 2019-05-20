@@ -52,7 +52,7 @@
 	  <span class="close" onclick="closeDialog()">X</span>
 	    <div class="modal-body">
 	        <div><img src="Icons-15.png" alt="Icons-15.png"></div>
-	        <form method="post"  onsubmit="registeruser(event)">
+	        <form onsubmit="signUp(event)" method="post">
 	        	<fieldset>
 	        	    <legend>Create your account</legend>
 	        		    <input type="text" name="username"  required minlength="4" maxlength="9" placeholder="Enter username">
@@ -70,7 +70,7 @@
 		<h3 class="modal-heading">Log in to Twitter</h3>
 		<span class="close" onclick="closeDialog()">X</span>
 		<div class="modal-body">
-			<form  method="post" onsubmit="registeruser(event)">
+			<form  onsubmit="login(event,email,password)" method="post">
 				<input type="text" name="Email" placeholder="Email Address" required="email">
 				<input type="text" name="Password" placeholder="Password" required="Password"><br>
 				<button type="submit" class="btn">Log in</button>
