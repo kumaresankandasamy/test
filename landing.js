@@ -1,5 +1,5 @@
 var Promise=["https://fsd1.herokuapp.com/users/login",
- 			 "​https://fsd1.herokuapp.com/users/create"];
+ 			 "https://fsd1.herokuapp.com/users/create"];
 
 function login(event,email,password){
 	event.preventDefault();
